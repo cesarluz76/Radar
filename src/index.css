@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html, body {
+    background-color: #060913;
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+    letter-spacing: 0.005em;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom sleek terminal scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060913;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.22);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.45);
+}
+
+/* Glassmorphism surfaces tuned for #060913 */
+.terminal-glass {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.72), rgba(9, 14, 29, 0.85));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.terminal-glass-emerald {
+  background: linear-gradient(145deg, rgba(6, 78, 59, 0.22), rgba(9, 14, 29, 0.88));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(16, 185, 129, 0.24);
+}
+
+.terminal-glass-gold {
+  background: linear-gradient(145deg, rgba(120, 53, 15, 0.22), rgba(9, 14, 29, 0.88));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.26);
+}
+
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 5.5s linear infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-radar-sweep {
+    animation: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "RADAR VALUATION PRO",
+  "description": "Terminal profissional de inteligência financeira, valuation multi-métodos, Radar Sonar Consenso 3X/4X/5X, inteligência de dividendos, análise técnica e gestão de carteiras para Brasil (B3) e Estados Unidos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
